@@ -1,17 +1,25 @@
 ---
 ---
 
-@import "bootstrap";
+//@import "bootstrap";
 
-nav.navbar-top {
+body {
+    position: relative;
+}
+
+section.navbar-top {
     margin: 0;
 }
 
 .jumbotron {
     padding: 60px 0;
-    margin: 0;
     background: limegreen;
     color: white;
+    margin: 0;
+}
+
+main {
+    padding-top: 20px;
 }
 
 /* Table of Contents */

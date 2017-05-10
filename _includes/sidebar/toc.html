@@ -1,17 +1,22 @@
-<ul class="nav nav-pills nav-stacked toc">
-</ul>
+<nav id="toc"></nav>
 <script>
-  // Will be jQueried
-  var toc = document.querySelector('.toc');
-  var hs = document.querySelector('main article').querySelectorAll('h1');
-  hs = Array.from(hs);
-  hs.forEach(function(elm) {
-    elm.id = encodeURIComponent(elm.innerText);
-    var li = document.createElement('li')
-    var a = document.createElement('a')
-    a.href = '#' + elm.id;
-    a.innerText = elm.innerText;
-    li.appendChild(a)
-    toc.appendChild(li)
-  })
+$(function() {
+  var toc = $('#toc')
+  Toc.init({
+    $nav: $('#toc'),
+    $scope: $('main article')
+  });
+  $('body').scrollspy({
+    target: '#toc'
+  });
+  var offset = toc.offset();
+  toc.width(toc.width());
+  $(window).scroll(function () {
+    if($(window).scrollTop() > offset.top - 20) {
+      toc.addClass('fixed');
+    } else {
+      toc.removeClass('fixed');
+    }
+  });
+});
 </script>

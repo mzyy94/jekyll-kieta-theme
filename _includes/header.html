@@ -3,14 +3,11 @@
     <div class="row">
       <div class="col-md-9">
         <h1>{{ page.title }}</h1>
-{% capture categories %}{% if post %}{{ post.categories }}{% else %}{{ page.categories }}{% endif %}{% endcapture %}
-{% if categories %}
           <span class="categories">
-            {% for category in categories %}
+            {% for category in page.categories %}
             <a class="category" href="#{{category}}" hidefocus="true">{{category}}</a>
             {% endfor %}
           </span>
-{% endif %}
       </div>
       <div class="col-md-3">
       </div>

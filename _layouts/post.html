@@ -1,5 +1,21 @@
 ---
 layout: default
 ---
+{% include header.html %}
+{% include toolbar.html %}
 
-{{ content }}
+<main class="container">
+  <section class="row">
+    <article class="col-md-9">
+        {% if false %}
+        <div class="alert alert-warning" role="alert">
+            TODO: Warning message here
+        </div>
+        {% endif %}
+        {{ content }}
+    </article>
+    <div class="col-md-3">
+        {% include sidebar.html %}
+    </div>
+  </section>
+</main>

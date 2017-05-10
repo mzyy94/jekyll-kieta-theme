@@ -1,0 +1,42 @@
+---
+---
+
+@import "bootstrap";
+
+nav.navbar-top {
+    margin: 0;
+}
+
+.jumbotron {
+    padding: 60px 0;
+    margin: 0;
+    background: limegreen;
+    color: white;
+}
+
+.toc {
+    & a {
+        color: gray;
+    }
+}
+
+.category {
+    background: lightgrey;
+    color: black;
+    outline: none;
+    position: relative;
+    height: 20px;
+    padding: 0 8px;
+    display: inline-block;
+    margin: auto 10px;
+    &::before {
+        content: '';
+            height: 0;
+    position: absolute;
+    width: 0;
+    border: 10px solid transparent;
+    border-right-color: lightgrey;
+    left: -20px;
+    top: 0;
+    }
+}

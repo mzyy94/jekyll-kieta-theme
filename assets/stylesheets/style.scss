@@ -63,7 +63,7 @@ footer.footer {
     line-height: 1rem;
     padding: 0 8px;
     display: inline-block;
-    margin: auto 10px;
+    margin: auto 20px;
     &::before {
         content: '';
         height: 0;
@@ -73,5 +73,15 @@ footer.footer {
         border-right-color: lightgrey;
         left: -1rem;
         top: 0;
+    }
+    &::after {
+        content: attr(data-count);
+        display: inline-block;
+        padding: 0 0.5em;
+        text-align: center;
+        color: white;
+        background: darkslategrey;
+        position: absolute;
+        margin-left: 8px;
     }
 }

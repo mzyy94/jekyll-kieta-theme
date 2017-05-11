@@ -25,6 +25,14 @@ main {
 .sidebar div {
     margin: 10px 0;
 }
+
+.toolbar {
+    height: 40px;
+}
+
+.navbar {
+    border-bottom: 1px solid #eee;
+}
 /* Table of Contents */
 
 @import "bootstrap-toc";

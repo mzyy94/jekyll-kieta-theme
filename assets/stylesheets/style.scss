@@ -47,18 +47,20 @@ footer.footer {
     color: black;
     outline: none;
     position: relative;
-    height: 20px;
+    font-size: 0.9rem;
+    height: 1rem;
+    line-height: 1rem;
     padding: 0 8px;
     display: inline-block;
     margin: auto 10px;
     &::before {
         content: '';
-            height: 0;
-    position: absolute;
-    width: 0;
-    border: 10px solid transparent;
-    border-right-color: lightgrey;
-    left: -20px;
-    top: 0;
+        height: 0;
+        position: absolute;
+        width: 0;
+        border: 0.5rem solid transparent;
+        border-right-color: lightgrey;
+        left: -1rem;
+        top: 0;
     }
 }

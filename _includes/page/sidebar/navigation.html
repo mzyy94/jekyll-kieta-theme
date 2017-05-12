@@ -1,0 +1,7 @@
+{% if site.data.pages %}
+<nav class="list-group">
+{% for page in site.data.pages %}
+  <a href="{{ page.url }}" class="list-group-item"><i class="fa fa-{{ page.icon }} mr-2" aria-hidden="true"></i> {{ page.title }}</a>
+{% endfor %}
+</nav>
+{% endif %}

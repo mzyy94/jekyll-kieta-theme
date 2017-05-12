@@ -3,6 +3,7 @@
 
 @import 'tocbot-core';
 @import 'toc';
+@import 'tweek';
 
 body {
     position: relative;
@@ -17,6 +18,15 @@ body {
 }
 .bg-white {
     background: white;
+}
+
+main article {
+    h1 {
+        border-bottom: solid 3px gainsboro;
+    }
+    h2 {
+        border-bottom: solid 1px gainsboro;
+    }
 }
 
 .toolbar {

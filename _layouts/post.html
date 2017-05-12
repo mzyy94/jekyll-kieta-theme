@@ -6,14 +6,20 @@ layout: default
 
 <main class="container pt-4">
   <section class="row">
-    <article class="col-md-9" data-spy="scroll" data-target="#toc" data-offset="0">
+    <div class="col-md-9" data-spy="scroll" data-target="#toc" data-offset="0">
         {% if false %}
         <div class="alert alert-warning" role="alert">
             TODO: Warning message here
         </div>
         {% endif %}
+        <article>
         {{ content }}
-    </article>
+        </article>
+        <div class="w-100 bg-faded share p-3 my-5">
+        {% include post/share.html %}
+        </div>
+        {% include post/disqus.html %}
+    </div>
     <div class="col-md-3">
         {% include post/sidebar.html %}
     </div>

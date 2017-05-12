@@ -37,7 +37,21 @@ main article {
     border-bottom: 1px solid #eee;
 }
 
-/* Footer */
+.share {
+    border-top: solid 6px lightgray;
+}
+
+[id^=___plusone] {
+  width:65px !important;
+}
+
+.fb_iframe_widget > span {
+  vertical-align: baseline !important;
+}
+
+.pocket-btn {
+  display: inline-block;
+}
 
 footer.footer {
   bottom: 0;

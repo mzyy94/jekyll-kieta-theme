@@ -7,7 +7,7 @@ permalink: /tags
   <h1 class="my-3">Tags</h1>
   <section class="row">
 {% for category in site.categories %}
-    <div class="col-3">
+    <div class="col-md-3">
       <a class="category" data-toggle="collapse" href="#{{category[0] | uri_escape | slugify}}" hidefocus="true" data-count="{{ category[1] | size }}">{{category[0] | truncate: 10}}</a>
     </div>
       <div class="collapse w-100" id="{{category[0] | uri_escape | slugify}}">

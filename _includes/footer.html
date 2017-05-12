@@ -1,12 +1,21 @@
 <footer class="footer">
   <div class="container">
     <hr>
-    <div>
+    <div class="d-flex w-100 justify-content-between">
       <p class="text-muted">
         Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }} -
-        <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span> -
-        <span class="credit">Designed with <a href="https://github.com/mzyy94/jekyll-kieta-theme">Kieta</a></span>
+        <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a> & 
+        <a href="https://github.com/mzyy94/jekyll-kieta-theme">Kieta</a></span>
       </p>
+      <nav>
+        <a href="/" class="mx-1">All posts</a>
+        <a href="/tags" class="mx-1">Tags</a>
+{% if site.data.pages %}
+{% for page in site.data.pages %}
+        <a href="{{ page.url }}" class="mx-1">{{ page.title }}</a>
+{% endfor %}
+{% endif %}
+      </nav>
     </div>
   </div>
 </footer>

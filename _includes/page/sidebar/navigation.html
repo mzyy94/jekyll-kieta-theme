@@ -1,7 +1,9 @@
-{% if site.data.pages %}
 <nav class="list-group">
+  <a href="/" class="list-group-item"><i class="fa fa-list mr-2" aria-hidden="true"></i> All posts</a>
+  <a href="/tags" class="list-group-item"><i class="fa fa-tags mr-2" aria-hidden="true"></i> Tags</a>
+{% if site.data.pages %}
 {% for page in site.data.pages %}
   <a href="{{ page.url }}" class="list-group-item"><i class="fa fa-{{ page.icon }} mr-2" aria-hidden="true"></i> {{ page.title }}</a>
 {% endfor %}
-</nav>
 {% endif %}
+</nav>

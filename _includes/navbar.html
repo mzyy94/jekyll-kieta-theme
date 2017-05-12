@@ -22,6 +22,11 @@
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navMenu">
             <a class="dropdown-item" href="/tags">Tags</a>
+{% if site.data.pages %}
+{% for page in site.data.pages %}
+            <a class="dropdown-item" href="{{ page.url }}">{{ page.title }}</a>
+{% endfor %}
+{% endif %}
           </div>
         </li>
       </ul>

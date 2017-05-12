@@ -1,0 +1,16 @@
+#toc {
+  position: relative;
+}
+#toc.fixed {
+  position: fixed;
+  top: 20px;
+}
+.toc-link {
+    widows: 100%;
+    display: block;
+}
+.is-active-link {
+    width: 100%;
+    background: WhiteSmoke;
+    font-weight: normal;
+}

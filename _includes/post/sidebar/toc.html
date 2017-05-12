@@ -1,19 +1,16 @@
-<nav id="toc"></nav>
+<nav id="toc" class="toc"></nav>
 <script>
 $(function() {
   var toc = $('#toc')
-  Toc.init({
-    $nav: $('#toc'),
-    $scope: $('main article')
-  });
-  $('#toc ul.nav').addClass('flex-column');
-  $('body').scrollspy({
-    target: '#toc'
+  tocbot.init({
+    tocSelector: '#toc',
+    contentSelector: 'main article',
+    headingSelector: 'h1, h2, h3',
   });
   var offset = toc.offset();
   toc.width(toc.width());
   $(window).scroll(function () {
-    if($(window).scrollTop() > offset.top - 20) {
+    if($(window).scrollTop() > offset.top) {
       toc.addClass('fixed');
     } else {
       toc.removeClass('fixed');

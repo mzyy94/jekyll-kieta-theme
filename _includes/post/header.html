@@ -3,9 +3,9 @@
     <div class="row">
       <div class="col-md-9">
         <h1>{{ page.title }}</h1>
-          <span class="categories">
-            {% for category in page.categories %}
-            <a class="category" href="/tags#{{category | uri_escape | slugify }}" hidefocus="true" data-count="{{ site.categories[category] | size }}">{{category}}</a>
+          <span class="tags">
+            {% for tag in page.tags %}
+            <a class="tag" href="/tags#{{tag | uri_escape | slugify }}" hidefocus="true" data-count="{{ site.tags[tag] | size }}">{{tag}}</a>
             {% endfor %}
           </span>
       </div>

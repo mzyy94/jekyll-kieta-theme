@@ -6,19 +6,19 @@ permalink: /tags
 <main class="container h-100">
   <h1 class="my-3">Tags</h1>
   <section class="row">
-{% for category in site.categories %}
+{% for tag in site.tags %}
     <div class="col-md-3">
-      <a class="category" data-toggle="collapse" href="#{{category[0] | uri_escape | slugify}}" hidefocus="true" data-count="{{ category[1] | size }}">{{category[0] | truncate: 10}}</a>
+      <a class="tag" data-toggle="collapse" href="#{{tag[0] | uri_escape | slugify}}" hidefocus="true" data-count="{{ tag[1] | size }}">{{tag[0] | truncate: 10}}</a>
     </div>
-      <div class="collapse w-100" id="{{category[0] | uri_escape | slugify}}">
+      <div class="collapse w-100" id="{{tag[0] | uri_escape | slugify}}">
         <section class="list-group">
-{% for post in category[1] %}
+{% for post in tag[1] %}
 {% assign content = post.content %}
           <article class="list-group-item flex-column align-items-start">
             <a href="{{ post.url }}" class="text-black"><h5 class="mb-0">{{ post.title }}</h5></a>
             <div class="mb-1 text-muted">
               <time class="small">{{ post.date | date_to_string }}</time>
-              <span class="small"><i class="fa fa-tags" aria-hidden="true"></i>{{ post.categories | join:", " }}</span>
+              <span class="small"><i class="fa fa-tags" aria-hidden="true"></i>{{ post.tags | join:", " }}</span>
             </div>
           </article>
 {% endfor %}

@@ -9,7 +9,30 @@
             {% endfor %}
           </span>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3" style="text-align: center">
+        <div class="mb-3 d-inline-block">
+          <span class="d-block">
+            <a id="disqus_comment_count" class="invisible" style="display: none" href="{{ page.url }}#disqus_thread"></a>
+            <i class="fa fa-comment" aria-hidden="true"></i>
+            <span id="comment_count" class="h3">0</span>
+          </span>
+          <span>Comments</span>
+        </div>
+<script>
+var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+if (MutationObserver) {
+  var obs = new MutationObserver(function(mutations, observer){
+    var mutation = mutations[0];
+    var count = mutation.addedNodes[0].textContent.replace(/[^0-9]/g, '');
+    document.getElementById('comment_count').textContent = count;
+    mutation.target.parentNode.removeChild(mutation.target);
+    obs.disconnect();
+  });
+  obs.observe(document.getElementById('disqus_comment_count'), { childList:true, subtree:true, characterData: true });
+}
+</script>
+<script id="dsq-count-scr" src="//mzyy94blog.disqus.com/count.js" async></script>
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}{{ ' | ' | uri_escape }}{{ site.title | uri_escape }}&url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}" class="btn btn-secondary btn-block text-theme-color"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</a>
       </div>
     </div>
   </div>

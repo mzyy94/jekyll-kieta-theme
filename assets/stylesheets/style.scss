@@ -9,12 +9,12 @@ body {
     position: relative;
 }
 
-.theme-color {
-    background: limegreen;
+.bg-theme-color {
+    background: {{ site.color }};
 }
 
 .text-theme-color {
-    color: limegreen;
+    color: {{ site.color }} !important;
 }
 
 .text-black {

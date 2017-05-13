@@ -7,9 +7,12 @@ layout: default
 <main class="container pt-4">
   <section class="row">
     <div class="col-md-9" data-spy="scroll" data-target="#toc" data-offset="0">
-        {% if false %}
+        {% capture one_year %}{{ 60 | times: 60 | times: 24 | times: 365 }}{% endcapture %}
+        {% capture current_time %}{{ site.time | date: "%s" }}{% endcapture %}
+        {% capture year_old %}{{ page.date | date: "%s" | minus: current_time | divided_by: one_year | plus: 1 }}{% endcapture %}
+        {% if year_old contains '-' %}
         <div class="alert alert-warning" role="alert">
-            TODO: Warning message here
+            <i class="fa fa-clock-o" aria-hidden="true"></i> This article is more than 1 year old. Please read this page keeping its age in your mind.
         </div>
         {% endif %}
         <article>

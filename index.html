@@ -2,13 +2,13 @@
 layout: page
 ---
 
-<h1 class="mb-4 d-inline-block">All posts</h1> <a href="{{ site.feed.path }}"><i class="fa fa-rss-square text-warning" aria-hidden="true"></i></a>
+<h1 class="mb-4 d-inline-block">All posts</h1> <a href="{{ site.baseurl }}{{ site.feed.path }}"><i class="fa fa-rss-square text-warning" aria-hidden="true"></i></a>
 
 <section class="list-group">
   {% for post in paginator.posts %}
   {% assign content = post.content %}
   <article class="list-group-item flex-column align-items-start">
-    <a href="{{ post.url }}" class="text-black"><h5 class="mb-0">{{ post.title }}</h5></a>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="text-black"><h5 class="mb-0">{{ post.title }}</h5></a>
     <div class="mb-1 text-muted">
       <time class="small">{{ post.date | date_to_string }}</time>
       <span class="small"><i class="fa fa-tags" aria-hidden="true"></i>{{ post.tags | join:", " }}</span>
@@ -22,7 +22,7 @@ layout: page
   <ul class="pagination">
 {% if paginator.previous_page %}
     <li class="page-item">
-      <a class="page-link" href="{{ paginator.previous_page_path }}" aria-label="Previous">
+      <a class="page-link" href="{{ site.baseurl }}{{ paginator.previous_page_path }}" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
         <span class="sr-only">Previous</span>
       </a>
@@ -34,14 +34,14 @@ layout: page
 {% if page == 1 %}
 {% assign url = "/" %}
 {% endif %}
-    <li class="page-item"><a class="page-link" href="{{ url }}">{{page}}</a></li>
+    <li class="page-item"><a class="page-link" href="{{ site.baseurl }}{{ url }}">{{page}}</a></li>
 {% else %}
     <li class="page-item active"><span class="page-link">{{page}}</span></li>
 {% endif %}
 {% endfor %}
 {% if paginator.next_page %}
     <li class="page-item">
-      <a class="page-link" href="{{ paginator.next_page_path }}" aria-label="Next">
+      <a class="page-link" href="{{ site.baseurl }}{{ paginator.next_page_path }}" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
         <span class="sr-only">Next</span>
       </a>

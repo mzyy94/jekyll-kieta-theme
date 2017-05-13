@@ -15,7 +15,7 @@ permalink: /tags
 {% for post in tag[1] %}
 {% assign content = post.content %}
           <article class="list-group-item flex-column align-items-start">
-            <a href="{{ post.url }}" class="text-black"><h5 class="mb-0">{{ post.title }}</h5></a>
+            <a href="{{ site.baseurl }}{{ post.url }}" class="text-black"><h5 class="mb-0">{{ post.title }}</h5></a>
             <div class="mb-1 text-muted">
               <time class="small">{{ post.date | date_to_string }}</time>
               <span class="small"><i class="fa fa-tags" aria-hidden="true"></i>{{ post.tags | join:", " }}</span>

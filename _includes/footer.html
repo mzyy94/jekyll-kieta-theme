@@ -9,8 +9,8 @@
       </p>
       <div class="w-100 hidden-sm-up"></div>
       <nav class="col col-md-auto col-sm-12">
-        <a href="/" class="mx-1">All posts</a>
-        <a href="/tags" class="mx-1">Tags</a>
+        <a href="{{ site.baseurl }}/" class="mx-1">All posts</a>
+        <a href="{{ site.baseurl }}/tags" class="mx-1">Tags</a>
 {% if site.data.pages %}
 {% for page in site.data.pages %}
         <a href="{{ page.url }}" class="mx-1">{{ page.title }}</a>

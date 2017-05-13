@@ -24,6 +24,11 @@ body {
     background: white;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
 main article {
     h1 {
         border-bottom: solid 3px gainsboro;

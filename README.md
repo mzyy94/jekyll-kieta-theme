@@ -2,37 +2,61 @@
 
 **Clean knowledge sharing jekyll theme**
 
+![preview](preview.png)
 ---
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes` and your sass in `_sass`. To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+Download newest release from [release](https://github.com/mzyy94/jekyll-kieta-theme/releases) page.
+Extract and get all files from there.
 
-```ruby
-gem "jekyll-kieta-theme"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
+And add these lines to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: jekyll-kieta-theme
+subtitle: All hope is gone
+author: YOUR_NAME_OR_ID
+github:
+  username: YOUR_GITHUB_ID
+twitter:
+  username: YOUR_TWITTER_ID
+disqus: YOUR_DISQUS_SHORTNAME
+color: limegreen
+
+permalink: /items/:title
+search_engine: https://www.google.com/search
+paginate: 5 
+paginate_path: "/page/:num"
+jekyll-mentions: https://twitter.com
+feed:
+  path: /atom.xml
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+gems:
+  - jekyll-avatar
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-mentions
+  - jekyll-sitemap
+  - jemoji
+  - jekyll-feed
+  # Add more you want
+markdown: kramdown
+kramdown:
+  auto_ids:       true
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      true
+  footnote_nr:    1
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll-kieta-theme
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, and/or sass.
+Create posts or some independed pages.
 
 ## Contributing
 

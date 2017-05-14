@@ -11,9 +11,14 @@
 Download newest release from [release](https://github.com/mzyy94/jekyll-kieta-theme/releases) page.
 Extract and get all files from there.
 
-And add these lines to your Jekyll site's `_config.yml`:
+**OR**
+
+[Fork](https://github.com/mzyy94/jekyll-kieta-theme/fork) this repository and rename it.
+
+And then, add these lines to your Jekyll site's `_config.yml`:
 
 ```yaml
+title: Kieta
 subtitle: All hope is gone
 author: YOUR_NAME_OR_ID
 github:
@@ -21,11 +26,11 @@ github:
 twitter:
   username: YOUR_TWITTER_ID
 disqus: YOUR_DISQUS_SHORTNAME
-color: limegreen
+color: limegreen # web color
 
 permalink: /items/:title
 search_engine: https://www.google.com/search
-paginate: 5 
+paginate: 5
 paginate_path: "/page/:num"
 jekyll-mentions: https://twitter.com
 feed:
@@ -56,11 +61,7 @@ kramdown:
 
 ## Usage
 
-Create posts or some independed pages.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Create posts or some independed pages. See [jekyll official docs](https://jekyllrb.com/docs/home/).
 
 ## Development
 

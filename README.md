@@ -21,12 +21,11 @@ And then, add these lines to your Jekyll site's `_config.yml`:
 title: Kieta
 subtitle: All hope is gone
 author: YOUR_NAME_OR_ID
-github:
-  username: YOUR_GITHUB_ID
 twitter:
   username: YOUR_TWITTER_ID
 disqus: YOUR_DISQUS_SHORTNAME
 color: limegreen # web color
+branch: master # where your github pages hosted branch
 
 permalink: /items/:title
 search_engine: https://www.google.com/search

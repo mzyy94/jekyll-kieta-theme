@@ -1,10 +1,10 @@
 <div class="card mb-4">
   <div class="card-block">
-    <a href="https://github.com/{{ site.github.username }}" class="d-inline-block align-top">
-      {% avatar {{ site.github.username }} size=50 %}
+    <a href="{{ site.github.owner_url }}" class="d-inline-block align-top">
+      {% avatar {{ site.github.owner_name }} size=50 %}
     </a>
     <div class="d-inline-block">
-      <span class="my-0 h5"><a href="https://github.com/{{ site.github.username }}" class="font-weight-bold">{{ site.author }}</a></span>
+      <span class="my-0 h5"><a href="{{ site.github.owner_url }}" class="font-weight-bold">{{ site.author }}</a></span>
       <p class="my-0"><strong>{{ site.posts | size }}</strong> Posts</p>
     </div>
   </div>

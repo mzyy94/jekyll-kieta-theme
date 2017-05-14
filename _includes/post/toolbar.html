@@ -7,17 +7,16 @@
       <li class="nav-item mx-3">
         <a href="https://getpocket.com/edit?url={{ site.url | uri_encode}}{{ page.url | uri_encode }}" class="nav-link"><i class="fa fa-folder-open" aria-hidden="true"></i> Stock</a>
       </li>
-      {% if site.repo %}
+      {% if site.branch %}
       <li class="nav-item dropdown mx-3">
         <a class="nav-link" href="#" id="navMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navMenu">
-          <a class="dropdown-item" href="{{ site.repo }}{{ page.path }}"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Source</a>
+          <a class="dropdown-item" href="{{ site.github.repository_url }}/raw/{{ site.branch }}/{{ page.path }}"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Source</a>
         </div>
       </li>
       {% endif %}
     </ul>
   </div>
-  {{ site.github.repository_url }}
 </section>

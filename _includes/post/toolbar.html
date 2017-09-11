@@ -1,9 +1,9 @@
-<section class="toolbar navbar navbar-toggleable navbar-top navbar-light bg-faded">
+<section class="toolbar navbar navbar-expand-sm navbar-top navbar-light bg-light">
   <div class="container">
     <div class="navbar-nav mr-auto">
       <time class="navbar-text">Posted at {{ page.date | date_to_string }}</time>
     </div>
-    <ul class="navbar-nav hidden-sm-down">
+    <ul class="navbar-nav flex-row d-none d-sm-flex">
       <li class="nav-item mx-3">
         <a href="https://getpocket.com/edit?url={{ site.url | uri_encode}}{{ page.url | uri_encode }}" class="nav-link"><i class="fa fa-folder-open" aria-hidden="true"></i> Stock</a>
       </li>

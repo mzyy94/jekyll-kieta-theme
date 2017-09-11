@@ -1,4 +1,4 @@
-<nav class="navbar navbar-toggleable-md navbar-light {% if page.layout == "post" %}bg-faded{% else %}bg-white{% endif %} navbar-top">
+<nav class="navbar navbar-expand-md navbar-light {% if page.layout == "post" %}bg-light{% else %}bg-white{% endif %} navbar-top">
   <div class="container">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,14 +10,14 @@
           <input class="form-control mr-sm-2" type="text" name="as_q" placeholder="Search">
           <input type="hidden" name="as_sitesearch" value="{{ site.url | shorthand_url }}" >
         </form>
-        <span class="navbar-text hidden-sm-down">
-          <span class="badge badge-warning">NEW</span> {{ site.subtitle }}
+        <span class="navbar-text d-none d-md-inline">
+          <span class="badge badge-warning text-white">NEW</span> {{ site.subtitle }}
         </span>
       </div>
-      <ul class="navbar-nav hidden-sm-down">
-        <li class="form-inline"><a href="{{ site.baseurl }}/" class="btn btn-warning">All posts</a></li>
+      <ul class="navbar-nav">
+        <li class="form-inline"><a href="{{ site.baseurl }}/" class="btn btn-warning text-white">All posts</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle d-md-block d-none" href="#" role="button" id="navMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Menu
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navMenu">

@@ -16,7 +16,7 @@ layout: default
         </div>
         {% endif %}
         <article>
-        {{ content }}
+        {{ content | replace: '<table>', '<table class="table">' }}
         </article>
         <div class="w-100 bg-light share p-3 my-5">
         {% include post/share.html %}

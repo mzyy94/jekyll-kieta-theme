@@ -38,7 +38,7 @@ feed:
 exclude:
   - Gemfile
   - Gemfile.lock
-gems:
+plugins:
   - jekyll-avatar
   - jekyll-paginate
   - jekyll-seo-tag

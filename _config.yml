@@ -1,0 +1,40 @@
+title: Kieta
+subtitle: All hope is gone
+author: YOUR_NAME_OR_ID
+twitter:
+  username: YOUR_TWITTER_ID
+disqus: YOUR_DISQUS_SHORTNAME
+branch: master # where your github pages hosted branch
+
+permalink: /items/:title
+search_engine: https://www.google.com/search
+paginate: 5
+paginate_path: "/page/:num"
+jekyll-mentions: https://twitter.com
+feed:
+  path: /atom.xml
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+plugins:
+  - jekyll-avatar
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-mentions
+  - jekyll-sitemap
+  - jekyll-feed
+  - jemoji
+
+markdown: kramdown
+kramdown:
+  auto_ids:       true
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      true
+  footnote_nr:    1

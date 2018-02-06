@@ -10,11 +10,11 @@ body {
 }
 
 .bg-theme-color {
-    background: {{ site.color }};
+    background: {{ site.color | default: "limegreen" }};
 }
 
 .text-theme-color {
-    color: {{ site.color }} !important;
+    color: {{ site.color | default: "limegreen" }} !important;
 }
 
 h1, h2, h3, h4, h5, h6 {

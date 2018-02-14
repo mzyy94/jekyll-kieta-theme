@@ -8,23 +8,17 @@
 
 ## Installation
 
-Download newest release from [release](https://github.com/mzyy94/jekyll-kieta-theme/releases) page.
-Extract and get all files from there.
-
-**OR**
-
-[Fork](https://github.com/mzyy94/jekyll-kieta-theme/fork) this repository and rename it.
-
-And then, add these lines to your Jekyll site's `_config.yml`:
+Simply create `_config.yml` in your repository root, and add these lines:
 
 ```yaml
-title: Kieta
-subtitle: All hope is gone
-author: YOUR_NAME_OR_ID
+title: Kieta # What you want
+subtitle: All hope is gone # Same as above
+author: YOUR_NAME_OR_ID # your name.
 twitter:
-  username: YOUR_TWITTER_ID
-disqus: YOUR_DISQUS_SHORTNAME
+  username: YOUR_TWITTER_ID # your name.
+disqus: YOUR_DISQUS_SHORTNAME 
 color: limegreen # web color
+remote_theme: mzyy94/jekyll-kieta-theme
 branch: master # where your github pages hosted branch
 
 permalink: /items/:title
